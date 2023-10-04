@@ -2,18 +2,25 @@ import React from "react";
 import {Image, StyleSheet, Text, View} from 'react-native';
 import logo from '../../../../assests/Logo.png';
 
-export default function Detalhe(){
+type Props = {
+    nome: string,
+    nomeSapato: string,
+    descricao: string,
+    preco: string
+}
+
+export default function Detalhe({nome, nomeSapato, descricao, preco}: Props){
     return<>
     
-    <Text style={estilos.nome}>Promoção de Sapatos </Text>
+    <Text style={estilos.nome}>{nome}}</Text>
 
     <View style={estilos.loja}>
         <Image style= {estilos.imagemSapato} source= {logo}/>
-        <Text style={estilos.nomeSapato}>Sapato Cristal</Text>
+        <Text style={estilos.nomeSapato}>{nomeSapato}</Text>
    </View>
 
-   <Text style={estilos.descricao}>Uma variedade de modelos de sapatos selecionados aqui na loja para o seu conforto. </Text>
-   <Text style={estilos.preco}>R$ 189,90 </Text>
+   <Text style={estilos.descricao}>{descricao}</Text>
+   <Text style={estilos.preco}>{preco}</Text>
 
     </>
 }

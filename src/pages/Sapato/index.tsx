@@ -4,13 +4,18 @@ import {StyleSheet, View } from 'react-native';
 
 import Detalhe from './components/Detalhe';
 import Topo from './components/Topo';
+import sapato from '../../mocks/sapato';
 
 export default function Sapato() {
-
     return<> 
-    <Topo/>
+    <Topo titulo={sapato.topo.titulo}/>
    <View style={estilos.sapato}>
-        <Detalhe/>
+        <Detalhe
+            nome={sapato.detalhes.nome}
+            nomeSapato={sapato.detalhes.nomeSapato}
+            descricao={sapato.detalhes.descricao}
+            preco={sapato.detalhes.preco}
+        />
    </View>
    </>
 }
